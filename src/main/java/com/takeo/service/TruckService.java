@@ -1,13 +1,11 @@
 package com.takeo.service;
 
-import com.takeo.model.Cargo;
-import org.springframework.stereotype.Service;
+import com.takeo.model.Truck;
 
-@Service
 public interface TruckService {
     public boolean save();
     public boolean listAll();
-    public Cargo findCargoById();
+    public Truck findCargoById();
     public boolean update(int id);
     public boolean delete(int id);
 }

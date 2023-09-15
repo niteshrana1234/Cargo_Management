@@ -14,7 +14,8 @@ public class Driver {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int driverId;
+    @Column(name="driver_name")
     private String name;
     private int age;
-    private int licenceNum;
+    private long licenceNum;
 }

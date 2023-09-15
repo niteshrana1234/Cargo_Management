@@ -68,7 +68,7 @@
 <div class="container">
     <h1>Driver Registration</h1>
     <%--@elvariable id="driver" type=""--%>
-    <form:form action="saveDriver" modelAttribute="driver">
+    <form:form action="updateDriver" modelAttribute="driver">
         <form:hidden path="driverId"/><br><br>
         <label for="name">Enter driver name :</label>
         <form:input path="name"/><br><br>
@@ -78,7 +78,6 @@
         <form:input path="licenceNum" value=""/><br><br>
         <input style="margin-bottom: 0px;" type="submit" value="Submit"/>
     </form:form>
-    <a href="viewAll" style="margin-top: 20px; display: block;">View All Driver</a>
 </div>
 
 </body>

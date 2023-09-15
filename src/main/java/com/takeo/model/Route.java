@@ -20,5 +20,6 @@ public class Route {
     private String destinationAddress;
     @Temporal(TemporalType.DATE)
     private Date departureDate;
+    @Temporal(TemporalType.DATE)
     private Date ArrivalDate;
 }

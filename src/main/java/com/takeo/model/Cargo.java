@@ -15,7 +15,9 @@ import java.util.Date;
 public class Cargo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="cargo_id")
     private int id;
+    @Column(name="cargo_name")
     private String name;
     private String description;
     private int weight;
