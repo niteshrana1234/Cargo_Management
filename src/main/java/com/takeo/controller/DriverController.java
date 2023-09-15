@@ -28,22 +28,22 @@ public class DriverController {
 
         String msg = "";
         if(flag){
-            msg = "Driver Inserted Successfully";
+            msg = "Driver Inserted Successfully !!!";
         }
         else{
-            msg = "Insertion Failed";
+            msg = "Insertion Failed !!!";
         }
         model.addAttribute("msg",msg);
         return "driver-create";
     }
 
-    @RequestMapping("/viewAll")
+    @RequestMapping("/viewAllDriver")
     public String listDriver(Model model){
         List<Driver> dl = driverServiceImpl.listAll();
         model.addAttribute("listDriver",dl);
         return "dview";
     }
-    @RequestMapping("/goBack")
+    @RequestMapping("/goBackDriver")
     public String goBackToRegistration(){
 
         return "redirect:/createDriver";
@@ -63,6 +63,15 @@ public class DriverController {
     public String updateDriver(@ModelAttribute("driver") Driver driver){
         driverServiceImpl.update(driver);
 
-        return "redirect:/viewAll";
+        return "redirect:/viewAllDriver";
+    }
+
+    @RequestMapping("deleteDriver")
+    public String deleteDriver(@RequestParam("id") int id){
+      boolean flag = driverServiceImpl.delete(id);
+      if(flag){
+       return "redirect:/viewAllDriver";
+    }
+      return null;
     }
 }

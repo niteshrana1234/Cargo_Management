@@ -64,21 +64,20 @@
     </style>
 </head>
 <body>
-<h1 style="margin-left: 365px; margin-top: 10px;">${msg}</h1>
+<h1>${msg}</h1>
 <div class="container">
-    <h1>Driver Registration</h1>
-    <%--@elvariable id="driver" type=""--%>
-    <form:form action="saveDriver" modelAttribute="driver">
-        <form:hidden path="driverId"/><br><br>
-        <label for="name">Enter driver name :</label>
-        <form:input path="name"/><br><br>
-        <label for="age">Enter driver age :</label>
-        <form:input path="age" value=""/><br><br>
-        <label for="licenceNum">Enter driving licence number :</label>
-        <form:input path="licenceNum" value=""/><br><br>
+    <h1>Truck Registration</h1>
+    <%--@elvariable id="truck" type=""--%>
+    <form:form action="updateTruck" modelAttribute="truck">
+        <form:hidden path="truckId"/><br><br>
+        <label for="licencePlateNum">Enter plate number :</label>
+        <form:input path="licencePlateNum"/><br><br>
+        <label for="make">Enter truck make :</label>
+        <form:input path="make" value=""/><br><br>
+        <label for="model">Enter driving licence number :</label>
+        <form:input path="model" value=""/><br><br>
         <input style="margin-bottom: 0px;" type="submit" value="Submit"/>
     </form:form>
-    <a href="viewAllDriver" style="margin-top: 20px; display: block;">View All Driver</a>
 </div>
 
 </body>

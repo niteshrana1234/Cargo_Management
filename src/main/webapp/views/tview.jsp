@@ -50,34 +50,34 @@
 </head>
 <body>
 <div class="container">
-    <h1>List of Drivers</h1>
+    <h1>List of Trucks</h1>
     <table>
         <thead>
         <tr>
-            <th>Driver ID</th>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Licence Number</th>
+            <th>Truck ID</th>
+            <th>Plate Number</th>
+            <th>Make</th>
+            <th>Model</th>
             <th>Edit</th>
             <th>Delete</th>
         </tr>
         </thead>
         <tbody>
-        <c:forEach var="driver" items="${listDriver}">
+        <c:forEach var="truck" items="${listTruck}">
             <tr>
-                <td>${driver.driverId}</td>
-                <td>${driver.name}</td>
-                <td>${driver.age}</td>
-                <td>${driver.licenceNum}</td>
-                <td><a href="editDriver?id=${driver.driverId}">Edit</a></td>
+                <td>${truck.truckId}</td>
+                <td>${truck.licencePlateNum}</td>
+                <td>${truck.make}</td>
+                <td>${truck.model}</td>
+                <td><a href="editTruck?id=${truck.truckId}">Edit</a></td>
 
-                <td><a href="deleteDriver?id=${driver.driverId}">Delete</a></td>
+                <td><a href="deleteTruck?id=${truck.truckId}">Delete</a></td>
             </tr>
         </c:forEach>
         </tbody>
     </table>
 </div>
-<a href="goBackDriver" style="display: block; margin-left: 280px;">Go back to Registration</a>
+<a href="goBackTruck" style="display: block; margin-left: 280px;">Go back to Registration</a>
 
 
 </body>
