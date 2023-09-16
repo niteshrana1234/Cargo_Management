@@ -73,7 +73,7 @@
     <h1>Cargo Registration</h1>
 
     <%--@elvariable id="cargo" type=""--%>
-    <form:form action="saveCargo" modelAttribute="cargo">
+    <form:form action="updateCargo" modelAttribute="cargo">
 
         <form:hidden path="id"/><br><br>
         <label for="name">Enter cargo name :</label>
@@ -95,10 +95,10 @@
             <form:input type="date" path="deliveryDate" value=""/>
         </div>
 
-        <input style="margin-bottom: 0px; display: block; margin-top: 15px;" type="submit" value="Submit"/>
+        <input style="margin-bottom: 0px; display: block; margin-top: 15px;" type="submit" value="Submit Edit"/>
 
     </form:form>
-    <a href="viewAllCargo" style="margin-top: 20px; display: block;">View All Cargo</a>
+
 </div>
 
 </body>

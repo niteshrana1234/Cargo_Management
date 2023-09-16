@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Table
@@ -21,7 +21,9 @@ public class Cargo {
     private String name;
     private String description;
     private int weight;
-    private Date pickupDate;
-    private Date deliveryDate;
+    @Temporal(TemporalType.DATE)
+    private LocalDate pickupDate;
+    @Temporal(TemporalType.DATE)
+    private LocalDate deliveryDate;
 
 }
