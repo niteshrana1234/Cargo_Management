@@ -67,7 +67,8 @@
 <h1 style="margin-left: 365px; margin-top: 10px;">${msg}</h1>
 <div class="container">
 
-    <h1>Route Registration</h1>
+    <h1 style="display: inline-block">Route Registration</h1>
+    <a href="goHome" style="display: inline-block; padding-left: 220px">Home</a>
     <%--@elvariable id="route" type=""--%>
     <form:form action="saveRoute" modelAttribute="route">
         <form:hidden path="routeId"/><br><br>

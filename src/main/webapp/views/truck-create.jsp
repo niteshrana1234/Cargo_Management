@@ -66,7 +66,8 @@
 <body>
 <h1 style="margin-left: 365px; margin-top: 10px;">${msg}</h1>
 <div class="container">
-    <h1>Truck Registration</h1>
+    <h1 style="display: inline-block">Truck Registration</h1>
+    <a href="goHome" style="display: inline-block; padding-left: 220px">Home</a>
 
     <%--@elvariable id="truck" type=""--%>
     <form:form action="saveTruck" modelAttribute="truck">

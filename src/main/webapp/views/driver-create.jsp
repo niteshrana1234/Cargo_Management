@@ -66,7 +66,8 @@
 <body>
 <h1 style="margin-left: 365px; margin-top: 10px;">${msg}</h1>
 <div class="container">
-    <h1>Driver Registration</h1>
+    <h1 style="display: inline-block">Driver Registration</h1>
+    <a href="goHome" style="display: inline-block; padding-left: 220px">Home</a>
     <%--@elvariable id="driver" type=""--%>
     <form:form action="saveDriver" modelAttribute="driver">
         <form:hidden path="driverId"/><br><br>
@@ -79,6 +80,7 @@
         <input style="margin-bottom: 0px;" type="submit" value="Submit"/>
     </form:form>
     <a href="viewAllDriver" style="margin-top: 20px; display: block;">View All Driver</a>
+
 </div>
 
 </body>

@@ -8,7 +8,7 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <html>
 <head>
-    <title>Driver Registration</title>
+    <title>Route Registration</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -78,9 +78,10 @@
         <form:input path="destinationAddress" value=""/><br><br>
 
         <label for="departureDate">Select departure date:</label>
-        <form:input type="date" path="departureDate" value=""/><br><br>
+        <form:input type="date" path="departureDate" value="${route.departureDate}"/><br><br>
+
         <label for="arrivalDate">Select arrival date :</label>
-        <form:input type="date" path="arrivalDate" value=""/><br><br>
+        <form:input type="date" path="arrivalDate" value="${route.arrivalDate}"/><br><br>
 
         <input style="margin-bottom: 0px;" type="submit" value="Submit Edit"/>
     </form:form>

@@ -87,12 +87,12 @@
 
         <div class="date-input">
             <label for="pickupDate">Enter pickup date:</label>
-            <form:input type="date" path="pickupDate" value=""/>
+            <form:input type="date" path="pickupDate" value="${cargo.pickupDate}"/>
         </div>
 
         <div class="date-input">
             <label for="deliveryDate">Enter delivery date:</label>
-            <form:input type="date" path="deliveryDate" value=""/>
+            <form:input type="date" path="deliveryDate" value="${cargo.deliveryDate}"/>
         </div>
 
         <input style="margin-bottom: 0px; display: block; margin-top: 15px;" type="submit" value="Submit Edit"/>
