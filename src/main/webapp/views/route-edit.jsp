@@ -69,7 +69,7 @@
 
     <h1>Route Registration</h1>
     <%--@elvariable id="route" type=""--%>
-    <form:form action="saveRoute" modelAttribute="route">
+    <form:form action="updateRoute" modelAttribute="route">
         <form:hidden path="routeId"/><br><br>
 
         <label for="initialAddress">Enter initial address :</label>
@@ -82,9 +82,8 @@
         <label for="arrivalDate">Select arrival date :</label>
         <form:input type="date" path="arrivalDate" value=""/><br><br>
 
-        <input style="margin-bottom: 0px;" type="submit" value="Submit"/>
+        <input style="margin-bottom: 0px;" type="submit" value="Submit Edit"/>
     </form:form>
-    <a href="viewAllRoute" style="margin-top: 20px; display: block;">View All Route</a>
 </div>
 
 </body>

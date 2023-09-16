@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Table
@@ -19,7 +19,7 @@ public class Route {
     private String initialAddress;
     private String destinationAddress;
     @Temporal(TemporalType.DATE)
-    private Date departureDate;
+    private LocalDate departureDate;
     @Temporal(TemporalType.DATE)
-    private Date ArrivalDate;
+    private LocalDate arrivalDate;
 }
