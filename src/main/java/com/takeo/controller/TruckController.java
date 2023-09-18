@@ -1,5 +1,6 @@
 package com.takeo.controller;
 
+import com.takeo.model.Driver;
 import com.takeo.model.Truck;
 import com.takeo.service.impl.TruckServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +34,7 @@ public class TruckController {
             msg = "Registration Failed !!!";
         }
         model.addAttribute("msg", msg);
+        model.addAttribute("truck",new Truck());
         return "truck-create";
     }
 
@@ -51,7 +53,7 @@ public class TruckController {
         return "redirect:/createTruck";
     }
     @RequestMapping("/editTruck")
-    public String  editTruck(@RequestParam("id") int id, Model model){
+    public String  editTruck(@RequestParam("id") String id, Model model){
         Truck truck = truckService.findTruckById(id);
         model.addAttribute("truck",truck);
         return "truck-edit";
@@ -64,7 +66,7 @@ public class TruckController {
     }
 
     @RequestMapping("/deleteTruck")
-    public String deleteTruck(@RequestParam("id") int id){
+    public String deleteTruck(@RequestParam("id") String id){
        boolean flag = truckService.delete(id);
         if(flag){
             return "redirect:/viewAllTruck";

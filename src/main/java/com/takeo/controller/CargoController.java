@@ -1,6 +1,7 @@
 package com.takeo.controller;
 
 import com.takeo.model.Cargo;
+import com.takeo.model.Driver;
 import com.takeo.service.impl.CargoServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
@@ -39,6 +40,7 @@ public class CargoController {
             msg = "Insertion failed !!!";
         }
         model.addAttribute("msg",msg);
+        model.addAttribute("cargo",new Cargo());
 
         return "cargo-create";
     }
@@ -51,7 +53,7 @@ public class CargoController {
     }
 
     @RequestMapping("/editCargo")
-    public String editCargo(@RequestParam("id") int id, Model model){
+    public String editCargo(@RequestParam("id") String id, Model model){
 
        Cargo cargo = cargoService.findCargoById(id);
        if(cargo!=null){
@@ -80,7 +82,7 @@ public class CargoController {
     }
 
     @RequestMapping("/deleteCargo")
-    public String deleteCargo(@RequestParam("id") int id){
+    public String deleteCargo(@RequestParam("id") String id){
 
       boolean check =  cargoService.delete(id);
       if(check){

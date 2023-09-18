@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface TruckRepo extends JpaRepository<Truck,Integer> {
+public interface TruckRepo extends JpaRepository<Truck,String> {
 }

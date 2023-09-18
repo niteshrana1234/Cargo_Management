@@ -32,7 +32,7 @@ public class DriverServiceImpl implements DriverService {
     }
 
     @Override
-    public Driver findDriverById(int id) {
+    public Driver findDriverById(String id) {
         Optional<Driver> drv =  driverRepo.findById(id);
         Driver driver = null;
         if(drv!=null){
@@ -48,7 +48,7 @@ public class DriverServiceImpl implements DriverService {
     }
 
     @Override
-    public boolean delete(int id) {
+    public boolean delete(String id) {
         Driver driver = findDriverById(id);
         boolean flag = false;
         if(driver!=null){

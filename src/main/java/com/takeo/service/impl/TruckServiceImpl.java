@@ -32,7 +32,7 @@ public class TruckServiceImpl implements TruckService {
     }
 
     @Override
-    public Truck findTruckById(int id) {
+    public Truck findTruckById(String id) {
         Optional<Truck> optional = truckRepo.findById(id);
         Truck truck = optional.get();
         if (truck != null) {
@@ -48,7 +48,7 @@ public class TruckServiceImpl implements TruckService {
     }
 
     @Override
-    public boolean delete(int id) {
+    public boolean delete(String id) {
         Truck truck = findTruckById(id);
         if(truck!=null){
             truckRepo.delete(truck);

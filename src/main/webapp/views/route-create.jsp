@@ -70,6 +70,7 @@
     <h1 style="display: inline-block">Route Registration</h1>
     <a href="goHome" style="display: inline-block; padding-left: 220px">Home</a>
     <%--@elvariable id="route" type=""--%>
+
     <form:form action="saveRoute" modelAttribute="route">
         <form:hidden path="routeId"/><br><br>
 

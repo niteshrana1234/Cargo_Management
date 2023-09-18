@@ -36,7 +36,7 @@ public class RouteServiceImpl implements RouteService {
     }
 
     @Override
-    public Route findRouteById(int id) {
+    public Route findRouteById(String id) {
         Optional<Route> optional = routeRepo.findById(id);
         Route route = optional.get();
         if(route!=null){
@@ -51,7 +51,7 @@ public class RouteServiceImpl implements RouteService {
     }
 
     @Override
-    public boolean delete(int id) {
+    public boolean delete(String id) {
        Route route = findRouteById(id);
        if(route!=null){
            routeRepo.delete(route);

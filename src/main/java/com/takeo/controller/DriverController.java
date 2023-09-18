@@ -34,6 +34,7 @@ public class DriverController {
             msg = "Insertion Failed !!!";
         }
         model.addAttribute("msg",msg);
+        model.addAttribute("driver",new Driver());
         return "driver-create";
     }
 
@@ -50,7 +51,7 @@ public class DriverController {
     }
 
     @RequestMapping("/editDriver")
-    public String editDriver(@RequestParam("id") int id,Model model){
+    public String editDriver(@RequestParam("id") String id,Model model){
 
        Driver driver = driverServiceImpl.findDriverById(id);
 
@@ -67,7 +68,7 @@ public class DriverController {
     }
 
     @RequestMapping("deleteDriver")
-    public String deleteDriver(@RequestParam("id") int id){
+    public String deleteDriver(@RequestParam("id") String id){
       boolean flag = driverServiceImpl.delete(id);
       if(flag){
        return "redirect:/viewAllDriver";

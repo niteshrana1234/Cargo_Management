@@ -8,7 +8,7 @@ import java.util.List;
 public interface RouteService {
     public boolean save(Route route);
     public List<Route> listAll();
-    public Route findRouteById(int id);
+    public Route findRouteById(String id);
     public boolean update(Route route);
-    public boolean delete(int id);
+    public boolean delete(String id);
 }

@@ -34,6 +34,7 @@ public class RouteController {
             msg = "Insertion failed !!!";
         }
         model.addAttribute("msg",msg);
+        model.addAttribute("route",new Route());
         return "route-create";
     }
 
@@ -53,7 +54,7 @@ if(routeList!=null){
     }
 
     @RequestMapping("/editRoute")
-    public String routeEdit(@RequestParam("id") int id, Model model ){
+    public String routeEdit(@RequestParam("id") String id, Model model ){
        Route route = routeService.findRouteById(id);
        if(route!=null){
            model.addAttribute("route",route);
@@ -68,6 +69,15 @@ if(routeList!=null){
             return "redirect:/viewAllRoute";
         }
         return null;
+    }
+
+    @RequestMapping("/deleteRoute")
+    public String deleteRoute(@RequestParam("id") String id){
+    boolean flag = routeService.delete(id);
+        if(flag){
+            return "redirect:/viewAllRoute";
+        }
+     return null;
     }
 
 

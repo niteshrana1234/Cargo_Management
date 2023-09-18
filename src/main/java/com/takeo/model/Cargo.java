@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.GenericGenerator;
 
 import java.time.LocalDate;
 
@@ -14,9 +15,10 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class Cargo {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GenericGenerator(name="c_id", strategy = "com.takeo.customizeId.CargoIdGen")
+    @GeneratedValue(generator = "c_id",strategy = GenerationType.IDENTITY)
     @Column(name="cargo_id")
-    private int id;
+    private String id;
     @Column(name="cargo_name")
     private String name;
     private String description;

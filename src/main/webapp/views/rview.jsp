@@ -53,7 +53,7 @@
 <h1>${message}</h1>
 
 <div class="container">
-    <h1>List of Trucks</h1>
+    <h1>List of Routes</h1>
     <table>
         <thead>
         <tr>

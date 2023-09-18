@@ -7,7 +7,7 @@ import java.util.List;
 public interface TruckService {
     public boolean save(Truck truck);
     public List<Truck> listAll();
-    public Truck findTruckById(int id);
+    public Truck findTruckById(String id);
     public boolean update(Truck truck);
-    public boolean delete(int id);
+    public boolean delete(String id);
 }

@@ -29,7 +29,7 @@ public class CargoServiceImpl implements CargoService {
     }
 
     @Override
-    public Cargo findCargoById(int id) {
+    public Cargo findCargoById(String id) {
         Cargo cargo = cargoRepo.findById(id).get();
         if(cargo!=null){
             return  cargo;
@@ -43,7 +43,7 @@ public class CargoServiceImpl implements CargoService {
     }
 
     @Override
-    public boolean delete(int id) {
+    public boolean delete(String id) {
        Cargo cargo = findCargoById(id);
         if(cargo!=null){
             cargoRepo.delete(cargo);
